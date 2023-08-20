@@ -13,5 +13,13 @@ class WisdomController extends Controller
 
         return view('index')->with('wisdom', $motivationalText ?? null);
     }
+
+    public function destroy($id)
+    {
+        // Delete the motivational text
+        // WisdomGenerator::delete($id);
+
+        return redirect()->route('wisdom.index')->with('success', 'Motivational text deleted successfully!');
+    }
     
 }
