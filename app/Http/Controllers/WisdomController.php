@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class WisdomController extends Controller
 {
+    public function create()
+    {
+        return view('create');
+    }
     public function index(Request $request)
     {
         $motivationalText = WisdomGenerator::generate();
